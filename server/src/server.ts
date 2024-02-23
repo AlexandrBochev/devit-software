@@ -16,7 +16,6 @@ app.post('/api', (req: Request, res: Response) => {
   }, delay)
 })
 
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 })
