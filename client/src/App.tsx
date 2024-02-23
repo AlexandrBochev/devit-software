@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Form } from './components/Form'
 import { ResponseList } from './components/ResponseList'
+import { sleep } from './utils/utils'
+import { API_URL } from './constants/api'
 
 export const App = () => {
   const [responses, setResponses] = useState<number[]>([])
@@ -18,14 +20,13 @@ export const App = () => {
       if (i % concurrency === 0) {
         await sleep(delayBetweenRequests)
       }
-
       sendRequest(i)
     }
   }
 
   const sendRequest = async (index: number) => {
     try {
-      const response = await fetch('https://devit-software-server.vercel.app/api', {
+      const response = await fetch(`${ API_URL }/api`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,10 +41,6 @@ export const App = () => {
     } catch (error) {
       console.error('Error sending request:', error)
     }
-  }
-
-  const sleep = (ms: number) => {
-    return new Promise(resolve => setTimeout(resolve, ms))
   }
 
   return (

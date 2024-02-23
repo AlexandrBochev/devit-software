@@ -1,0 +1,1 @@
+export const API_URL = 'https://devit-software-server.vercel.app'
