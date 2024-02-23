@@ -51,8 +51,7 @@ export const App = () => {
       <h1 className="text-xl text-center font-semibold mb-4">
         Client-server Data Fetch
       </h1>
-
-      <Form onStart={ handleStart } />
+      <Form onStart={ handleStart } />   
       <ResponseList responses={ responses } />
     </div>
   )

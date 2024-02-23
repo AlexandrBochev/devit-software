@@ -1,9 +1,9 @@
 import { InputProps } from "../types/types"
 
-export const Input = ({ name, value, onChange }: InputProps) => {
+export const Input = ({ label, value, onChange }: InputProps) => {
   return (
     <div className="flex items-center justify-between mb-4">
-      <label>{ name }</label>
+      <label>{ label }</label>
       <input
         type="number"
         value={ value }

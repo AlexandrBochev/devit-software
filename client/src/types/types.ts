@@ -5,7 +5,7 @@ export interface FormProps {
 }
 
 export interface InputProps {
-  name: string
+  label: string
   value: number
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }

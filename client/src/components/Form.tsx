@@ -21,13 +21,13 @@ export const Form = ({ onStart  }: FormProps) => {
   return (
     <form className="border rounded-md bg-gray-50 shadow-sm p-4 mb-8">
       <Input
-        name="Concurrency"
+        label="Concurrency"
         value={ concurrency }
         onChange={ e => setConcurrency(Number(e.target.value)) }
       />
 
       <Input
-        name="Requests Per Second"
+        label="Requests Per Second"
         value={ requestsPerSecond }
         onChange={ e => setRequestsPerSecond(Number(e.target.value)) }
       />
