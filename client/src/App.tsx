@@ -25,7 +25,7 @@ export const App = () => {
 
   const sendRequest = async (index: number) => {
     try {
-      const response = await fetch('http://localhost:3001/api', {
+      const response = await fetch('https://devit-software-server.vercel.app/api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
